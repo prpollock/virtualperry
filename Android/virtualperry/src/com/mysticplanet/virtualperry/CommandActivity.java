@@ -1,4 +1,4 @@
-package com.mysticplanet.virtualperry.sample;
+package com.mysticplanet.virtualperry;
 
 import org.ispeech.FreeformType;
 import org.ispeech.SpeechRecognizer;
@@ -12,6 +12,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -24,8 +26,8 @@ import com.mysticplanet.virtualperry.R.id;
 import com.mysticplanet.virtualperry.R.layout;
 import com.mysticplanet.virtualperry.R.menu;
 
-public class CommandActivity extends Activity {
-	private static final String TAG = "iSpeech SDK Sample";
+public class CommandActivity extends ActionBase {
+	private static final String TAG = "VP";
 	SpeechRecognizer recognizer;
 	private Context _context;
 
@@ -38,11 +40,12 @@ public class CommandActivity extends Activity {
 		_context = this.getApplicationContext();
 
 		setContentView(R.layout.asr_command);
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 		findViewById(R.id.cmd_record).setOnClickListener(new onCommandListener());
 		findViewById(R.id.cmd_stop).setOnClickListener(new onStopListener());
 
 	}
-
+	
 
 	private class onCommandListener implements OnClickListener {
 

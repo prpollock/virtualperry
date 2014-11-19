@@ -1,4 +1,4 @@
-package com.mysticplanet.virtualperry.sample;
+package com.mysticplanet.virtualperry;
 
 import org.ispeech.FreeformType;
 import org.ispeech.SpeechRecognizer;
@@ -25,8 +25,8 @@ import com.mysticplanet.virtualperry.R.id;
 import com.mysticplanet.virtualperry.R.layout;
 import com.mysticplanet.virtualperry.R.menu;
 
-public class FreeformActivity extends Activity {
-	private static final String TAG = "iSpeech SDK Sample";
+public class FreeformActivity extends ActionBase {
+	private static final String TAG = "VP";
 	SpeechRecognizer recognizer;
 	private Context _context;
 

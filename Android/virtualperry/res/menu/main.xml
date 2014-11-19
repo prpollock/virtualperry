@@ -1,16 +1,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.mysticplanet.net.virtualperry.MainActivity" >
+    tools:context="com.mysticplanet.virtualperry.MainActivity" >
 
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:showAsAction="never"
         android:title="@string/action_settings"/>
+    
     <group android:id="@+id/speech" android:menuCategory="container" android:visible="true" android:enabled="true">
         <item android:id="@+id/freeform" android:menuCategory="system" android:enabled="true" android:alphabeticShortcut="A" android:visible="true" android:showAsAction="collapseActionView" android:numericShortcut="1" android:title="freeform"></item>
-        <item android:id="@+id/tts" android:menuCategory="system" android:title="TTS" android:enabled="true" android:visible="true" android:showAsAction="collapseActionView"></item>
-        <item android:id="@+id/cmd" android:enabled="true" android:visible="true" android:showAsAction="collapseActionView" android:title="cmd"></item>
+        <item android:id="@+id/ttsGroup" android:menuCategory="system" android:title="TTS" android:enabled="true" android:visible="true" android:showAsAction="collapseActionView"></item>
+        <item android:id="@+id/cmd" android:enabled="true" android:visible="true" android:showAsAction="collapseActionView" android:title="cmd" android:menuCategory="container"></item>
     </group>
+    <item android:id="@+id/tts" android:title="TTS Item" android:menuCategory="container"></item>
 
 </menu>

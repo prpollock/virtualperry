@@ -1,4 +1,4 @@
-package com.mysticplanet.virtualperry.sample;
+package com.mysticplanet.virtualperry;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -26,6 +26,8 @@ import android.net.Uri;
 import android.net.Uri.Builder;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
@@ -40,9 +42,9 @@ import com.mysticplanet.virtualperry.R.menu;
  * 
  *
  */
-public class TTSActivity extends Activity {
+public class TTSActivity extends ActionBase {
 
-	private static final String TAG = "iSpeech SDK Sample";
+	private static final String TAG = "VP";
 	SpeechSynthesis synthesis;
 	Context _context;
 
@@ -50,7 +52,7 @@ public class TTSActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);		
 		_context = this.getApplicationContext();
-
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 		setContentView(R.layout.tts);
 
 		((EditText) findViewById(R.id.text)).setText(R.string.tts_sample_text);
@@ -64,6 +66,7 @@ public class TTSActivity extends Activity {
 		synthesis.setStreamType(AudioManager.STREAM_MUSIC); 
 		
 	}
+
 
 
 	private void prepareTTSEngine() {

@@ -3,6 +3,7 @@
 	android:orientation="vertical" android:layout_width="fill_parent"
 	android:layout_height="fill_parent">
 
+
 	<EditText android:layout_width="fill_parent"
 		android:layout_height="fill_parent" android:layout_weight="1"
 		android:id="@+id/cmd_text" android:gravity="top" />
