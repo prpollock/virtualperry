@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.view.MenuItemCompat;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,8 +25,9 @@ public class MainActivity extends ActionBase{
 		_context = this.getApplicationContext();
 		setContentView(R.layout.activity_main);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
+		PreferenceManager.setDefaultValues(this, R.xml.preference, false);
 		
-		findViewById(R.id.tts).setOnClickListener(new OnClickListener() {
+		/**		findViewById(R.id.tts).setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
 				Intent myIntent = new Intent(_context, com.mysticplanet.virtualperry.TTSActivity.class);
@@ -34,7 +36,7 @@ public class MainActivity extends ActionBase{
 		});
 
 
-	/**	findViewById(R.id.freeform).setOnClickListener(new OnClickListener() {
+		findViewById(R.id.freeform).setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
 				Intent myIntent = new Intent(_context, com.mysticplanet.virtualperry.FreeformActivity.class);

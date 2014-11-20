@@ -3,6 +3,7 @@ package com.mysticplanet.virtualperry;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -34,6 +35,8 @@ public class ActionBase extends Activity {
 			// as you specify a parent activity in AndroidManifest.xml.
 			int id = item.getItemId();
 			if (id == R.id.action_settings) {
+				Intent myIntent = new Intent(_context, com.mysticplanet.virtualperry.SettingsActivity.class);
+				startActivity(myIntent);			
 				return true;
 			}
 			if (id == R.id.tts) {
@@ -53,6 +56,7 @@ public class ActionBase extends Activity {
 			}			
 
 			return super.onOptionsItemSelected(item);
-		}		
+		}
+		
 
 }

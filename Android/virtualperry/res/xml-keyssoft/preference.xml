@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+	<EditTextPreference android:key="userName" android:title="User Name" android:enabled="true"/><PreferenceScreen android:key="vp_voice" android:title="VP Voice"><ListPreference android:key="vp_VoiceType" android:title="VP Voice" android:dialogTitle="VP voice type" android:entries="@array/pref_vpVoice_entries" android:entryValues="@array/pref_vpVoice_values" android:defaultValue="UK English Male" /><ListPreference android:key="vp_lang_resp_type" android:title="VP language response" android:entryValues="@array/pref_vpVoice_values" android:entries="@array/pref_vpVoice_entries" android:defaultValue="UK English Male" />
+	    
+	    
+	</PreferenceScreen>
+	
+	    
+
+</PreferenceScreen>

@@ -20,11 +20,13 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.net.Uri.Builder;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -59,9 +61,11 @@ public class TTSActivity extends ActionBase {
 		findViewById(R.id.speak).setOnClickListener(new OnSpeakListener());
 		findViewById(R.id.stop).setOnClickListener(new OnStopListener());
 
-		
-		
-		prepareTTSEngine();
+		SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+		String syncConnPref = sharedPref.getString("vp_lang_resp_type", "").replace(' ', '_');
+
+	
+		prepareTTSEngine(syncConnPref);
 		
 		synthesis.setStreamType(AudioManager.STREAM_MUSIC); 
 		
@@ -69,10 +73,16 @@ public class TTSActivity extends ActionBase {
 
 
 
-	private void prepareTTSEngine() {
+	private void prepareTTSEngine(String voiceType) {
 		try {
+			
+
+			
+			
 			synthesis = SpeechSynthesis.getInstance(this);
-			synthesis.setVoiceType("ukenglishfemale2");
+			synthesis.setVoiceType(voiceType);
+			//synthesis.setVoiceType("ukenglishfemale2");
+			
 			synthesis.setSpeechSynthesisEvent(new SpeechSynthesisEvent() {
 
 				public void onPlaySuccessful() {

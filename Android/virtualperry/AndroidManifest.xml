@@ -21,7 +21,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" android:restoreNeedsApplication="false">
         
  
         
@@ -53,8 +53,9 @@
         <activity
             android:name=".CommandActivity"
             android:screenOrientation="portrait" 
-            android:parentActivityName="com.mysticplanet.virtualperry.MainActivity"/>       
-            <meta-data
+            android:parentActivityName="com.mysticplanet.virtualperry.MainActivity"/>   
+                
+            <activity android:name=".SettingsActivity"></activity><meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value="com.mysticplanet.virtualperry.MainActivity" />             
         <activity
@@ -67,7 +68,8 @@
             android:value="a4f5d8eaada64dfdcc45d08e6df0d043" />
         <meta-data
             android:name="debug"
-            android:value="false" />        
+            android:value="false" />
+                
     </application>
   
 </manifest>

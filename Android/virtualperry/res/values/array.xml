@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string-array name="pref_vpVoice_entries">
+	    <item>US English Female</item>
+	    <item>US English Male</item>
+	    <item>UK English Male</item>
+	    <item>US Spanish Male</item>
+	    <item>Chinese Male</item>
+	    <item>Japanese Female</item>
+	    <item>Japanese Male</item>
+	    <item>European Portuguese Male</item>
+	    <item>European Italian Male</item>
+	    <item>Swedish Female</item>
+	    <item>President Obama</item>		
+	</string-array>
+	<string-array name="pref_vpVoice_values">
+	    <item>usenglishfemale</item>
+	    <item>usenglishmale</item>
+	    <item>ukenglishmale</item>
+	    <item>usspanishmale</item>
+	    <item>chchinesemale</item>
+	    <item>jpjapanesefemale</item>
+	    <item>jpjapanesemale</item>
+	    <item>eurportuguesemale</item>
+	    <item>euritalianmale</item>
+	    <item>swswedishfemale</item>
+	    <item>obama</item>
+	</string-array>    
+	
+</resources>
