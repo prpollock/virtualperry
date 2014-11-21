@@ -61,11 +61,10 @@ public class TTSActivity extends ActionBase {
 		findViewById(R.id.speak).setOnClickListener(new OnSpeakListener());
 		findViewById(R.id.stop).setOnClickListener(new OnStopListener());
 
-		SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-		String syncConnPref = sharedPref.getString("vp_lang_resp_type", "").replace(' ', '_');
+
 
 	
-		prepareTTSEngine(syncConnPref);
+		prepareTTSEngine();
 		
 		synthesis.setStreamType(AudioManager.STREAM_MUSIC); 
 		
@@ -73,15 +72,20 @@ public class TTSActivity extends ActionBase {
 
 
 
-	private void prepareTTSEngine(String voiceType) {
+	private void prepareTTSEngine() {
 		try {
 			
-
+			SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+			String voiceType = sharedPref.getString("vp_lang_resp_type", "").replace(' ', '_');
 			
 			
 			synthesis = SpeechSynthesis.getInstance(this);
 			synthesis.setVoiceType(voiceType);
-			//synthesis.setVoiceType("ukenglishfemale2");
+			synthesis.addOptionalCommand("speed", sharedPref.getString("vp_voiceSpeed", ""));
+			synthesis.addOptionalCommand("pitch", sharedPref.getString("vp_voicePitch", ""));
+			synthesis.addOptionalCommand("bitrate", sharedPref.getString("vp_bitRate", ""));
+			synthesis.addOptionalCommand("format","mp3");
+			
 			
 			synthesis.setSpeechSynthesisEvent(new SpeechSynthesisEvent() {
 

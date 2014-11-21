@@ -4,7 +4,9 @@
 	<string-array name="pref_vpVoice_entries">
 	    <item>US English Female</item>
 	    <item>US English Male</item>
+	    <item>US English Male2</item>
 	    <item>UK English Male</item>
+	    <item>UK English Female2</item>
 	    <item>US Spanish Male</item>
 	    <item>Chinese Male</item>
 	    <item>Japanese Female</item>
@@ -17,7 +19,9 @@
 	<string-array name="pref_vpVoice_values">
 	    <item>usenglishfemale</item>
 	    <item>usenglishmale</item>
+	    <item>usenglishmale2</item>pref_vpVoiceSpeed_entriespref_vpVoiceSpeed_entries
 	    <item>ukenglishmale</item>
+	    <item>ukenglishfemale2</item>
 	    <item>usspanishmale</item>
 	    <item>chchinesemale</item>
 	    <item>jpjapanesefemale</item>
@@ -26,6 +30,54 @@
 	    <item>euritalianmale</item>
 	    <item>swswedishfemale</item>
 	    <item>obama</item>
+	</string-array>
+	<string-array name="pref_vpBitRate_entries">
+vp_recognizer_speexmode	    <item>48</item>
+	</string-array>
+	<string-array name="pref_vpBitRate_values">
+	    <item>48</item>
+    </string-array>
+	<string-array name="pref_vpVoiceSpeed_entries">
+		<item>Fastest</item>
+		<item>Faster</item>
+		<item>Normal</item>
+		<item>Slower</item>
+		<item>Slowest</item>	    
+	</string-array>
+	<string-array name="pref_vpVoiceSpeed_values">
+		<item>10</item>
+		<item>5</item>
+		<item>0</item>
+		<item>-5</item>
+		<item>-10</item>
+	</string-array>
+	<string-array name="pref_vpPitch_entries">
+		<item>Highest</item>
+		<item>Higher</item>
+		<item>Normal</item>
+		<item>Low</item>
+		<item>Lower</item>
+		<item>Lowest</item>	    
+	</string-array>
+	<string-array name="pref_vpPitch_values">
+		<item>200</item>
+		<item>150</item>
+		<item>100</item>
+		<item>90</item>
+		<item>50</item>
+		<item>0</item>
+	</string-array>
+	<string-array name="pref_vp_recognizer_speexmode_entries">
+		<item>Narrow</item>
+		<item>Wide</item>
+		<item>UltraWide</item>	    
 	</string-array>    
+	<string-array name="pref_vp_recognizer_speexmode_values">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>	    
+	</string-array> 	
+	
+	
 	
 </resources>

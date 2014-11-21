@@ -10,10 +10,12 @@ import org.ispeech.error.NoNetworkException;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -54,9 +56,12 @@ public class FreeformActivity extends ActionBase {
 	private void setupFreeFormDictation() {
 		try { 
 
+			SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+			String speexmode = sharedPref.getString("vp_recognizer_speexmode", "");
 			
 			recognizer = SpeechRecognizer.getInstance(_context);  
 			recognizer.setFreeForm(FreeformType.FREEFORM_DICTATION);
+			recognizer.addOptionalCommand("speexmode", speexmode);
 //			recognizer.setLocale("zh-CN");
 
 		} catch (InvalidApiKeyException e) {

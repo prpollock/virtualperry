@@ -8,26 +8,27 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.mysticplanet.virtualperry.MainActivity" >
 
-    <ImageView
-        android:id="@+id/imageView1"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_below="@+id/textView1"
-        android:layout_marginLeft="20dp"
-        android:contentDescription="@string/VP"
-        android:scaleType="fitCenter"
-        android:src="@drawable/virtual_perry" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:text="What revolutionary idea can we discuss today?" />
+        android:orientation="vertical" >
+
+        <EditText android:id="@+id/text1" android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:layout_weight="1" android:gravity="top"
+		android:layout_marginTop="25dp" />
+        
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="276dp"
+            android:layout_height="352dp"
+            android:layout_marginLeft="20dp"
+            android:contentDescription="@string/VP"
+            android:scaleType="fitCenter"
+            android:src="@drawable/virtual_perry" />
+
+    </LinearLayout>
 
 </RelativeLayout>

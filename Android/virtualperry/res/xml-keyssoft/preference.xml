@@ -2,6 +2,10 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
 	<EditTextPreference android:key="userName" android:title="User Name" android:enabled="true"/><PreferenceScreen android:key="vp_voice" android:title="VP Voice"><ListPreference android:key="vp_VoiceType" android:title="VP Voice" android:dialogTitle="VP voice type" android:entries="@array/pref_vpVoice_entries" android:entryValues="@array/pref_vpVoice_values" android:defaultValue="UK English Male" /><ListPreference android:key="vp_lang_resp_type" android:title="VP language response" android:entryValues="@array/pref_vpVoice_values" android:entries="@array/pref_vpVoice_entries" android:defaultValue="UK English Male" />
 	    
+	<ListPreference android:entryValues="@array/pref_vpVoiceSpeed_values" android:key="vp_voiceSpeed" android:entries="@array/pref_vpVoiceSpeed_entries" android:title="VP voice Speed" android:defaultValue="0"/>
+	<ListPreference android:entryValues="@array/pref_vpBitRate_values" android:key="vp_bitRate" android:entries="@array/pref_vpBitRate_entries" android:defaultValue="48" android:title="VP bit rate for MP3"/>
+	<ListPreference android:entryValues="@array/pref_vpPitch_values" android:key="vp_voicePitch" android:entries="@array/pref_vpPitch_entries" android:defaultValue="100" android:title="VP voice Pitch"/>
+	<ListPreference android:entryValues="@array/pref_vp_recognizer_speexmode_values" android:key="vp_recognizer_speexmode" android:entries="@array/pref_vp_recognizer_speexmode_entries" android:defaultValue="2" android:title="VP speex data model"/>
 	    
 	</PreferenceScreen>
 	
